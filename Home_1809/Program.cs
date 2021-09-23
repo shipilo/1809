@@ -8,7 +8,7 @@ namespace Home_1809
 {
     class Program
     {
-        public enum Mounths : int
+        enum Mounths : int
         {
             Январь,
             Февраль,
@@ -33,7 +33,7 @@ namespace Home_1809
             Console.WriteLine("A1.1");
             seconds = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("а) Полных часов прошло: {0}", seconds / 3600);
-            Console.WriteLine("б) Полных минут прошло: {0}", seconds / 60);
+            Console.WriteLine("б) Полных минут с начала часа прошло: {0}", seconds % 3600 / 60);
             Console.WriteLine("в) Полных секунд с начала минуты прошло: {0}", seconds % 60);
 
             Console.WriteLine("\nA1.2");
@@ -61,7 +61,7 @@ namespace Home_1809
             
             Console.WriteLine("\nA1.6");
             n = 237;
-            Console.WriteLine("x = {n % 100 * 10 + n / 100}");
+            Console.WriteLine($"x = {n % 100 * 10 + n / 100}");
             
             Console.WriteLine("\nA1.7");
             a2 = Convert.ToInt32(Console.ReadLine());
@@ -73,6 +73,7 @@ namespace Home_1809
             Console.WriteLine("\nA1.8");
             Console.Write("k, кратное трём: ");
             k = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine((k / 3));
             Console.WriteLine($"k-ая цифра = {(k / 3) % 10}");
 
             Console.Write("\nk = 1, 4, 7, ... : ");
