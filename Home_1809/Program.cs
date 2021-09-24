@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Home_1809
 {
     class Program
     {
-        enum Mounths : int
+        enum Mounths
         {
-            Январь,
+            Январь = 1,
             Февраль,
             Март,
             Апрель,
@@ -44,9 +40,8 @@ namespace Home_1809
             
             Console.WriteLine("\nA1.3");
             n = Convert.ToInt32(Console.ReadLine());
-            if (n == 12) Console.WriteLine("Январь");
-            else Console.WriteLine((Mounths)n);
-            
+            Console.WriteLine((Mounths)(n + 1 - 12 * (n / 12)));
+                        
             Console.WriteLine("\nA1.4");
             n = rnd.Next(10, 100);
             Console.WriteLine("Число = {0}", n);

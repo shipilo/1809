@@ -49,7 +49,7 @@ namespace Les_1809
             str = Console.ReadLine();
             string str_sub = Console.ReadLine();
             int k = 0;
-            for(int i = 0; i < str.Length; i++)
+            while(true)
             {
                 if (str.Contains(str_sub))
                 {
@@ -57,10 +57,10 @@ namespace Les_1809
                     str = str.Substring(index + str_sub.Length);
                     k++;
                 }
-
+                else break;
             }
             Console.WriteLine("Подстрока встречается {0} раз(а)\n", k);
-            
+
             //5
             Console.WriteLine(ToCMperSekonds(Convert.ToDouble(Console.ReadLine())) + "\n");
             
